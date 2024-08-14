@@ -1,0 +1,12 @@
+services:
+  app:
+    image: webdevops/php-nginx:8.2
+    working_dir: /app
+    volumes:
+      - ./:/app
+    ports:
+      - "8000:80"
+    environment:
+      APP_ENV: dev
+      WEB_DOCUMENT_ROOT: '/app/public'
+      WEB_DOCUMENT_INDEX: 'index.php'
